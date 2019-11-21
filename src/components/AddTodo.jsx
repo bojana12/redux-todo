@@ -15,7 +15,7 @@ const AddTodo = ({ addTodo }) => {
   };
 
   const enterPressed = event => {
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && inputValue) {
       addTodo(inputValue);
       changeInputValue("");
     }
