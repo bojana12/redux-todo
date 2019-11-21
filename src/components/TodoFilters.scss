@@ -1,0 +1,36 @@
+.todo-filters {
+  button {
+    font-size: 14px;
+    padding: 4px 6px;
+    margin-right: 10px;
+    border: 1px solid #000;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 10px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .active-button {
+    &:hover {
+      background-color: #ff6666;
+    }
+  }
+
+  .completed-button {
+    &:hover {
+      background-color: #80ff80;
+    }
+  }
+
+  .all-button {
+    &:hover {
+      background-color: #e0ccff;
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { todoReducer } from "../reducers/";
 import "../App.css";
 import AddTodoContainer from "../containers/AddTodo";
 import TodoListContainer from "../containers/TodoList";
-import TodoFilters from "./TodoFilters";
+import TodoFiltersContainer from "../containers/TodoFilters";
 
 const store = createStore(
   todoReducer,
@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <AddTodoContainer />
         <TodoListContainer />
-        <TodoFilters />
+        <TodoFiltersContainer />
       </div>
     </Provider>
   );

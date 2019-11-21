@@ -1,7 +1,8 @@
-import { ADD_TODO, TOGGLE_TODO } from "../actions";
+import { ADD_TODO, TOGGLE_TODO, SET_FILTER } from "../actions";
 
 const initialState = {
-  todos: []
+  todos: [],
+  filter: "all"
 };
 
 export const todoReducer = (state = initialState, action) => {
@@ -9,7 +10,6 @@ export const todoReducer = (state = initialState, action) => {
     case ADD_TODO:
       return {
         ...state,
-
         todos: [
           ...state.todos,
           {
@@ -21,6 +21,7 @@ export const todoReducer = (state = initialState, action) => {
       };
     case TOGGLE_TODO:
       return {
+        ...state,
         todos: [
           ...state.todos.map(todo =>
             todo.id === action.id
@@ -28,6 +29,11 @@ export const todoReducer = (state = initialState, action) => {
               : todo
           )
         ]
+      };
+    case SET_FILTER:
+      return {
+        ...state,
+        filter: action.name
       };
 
     default:

@@ -1,0 +1,35 @@
+.add-todo {
+  margin-top: 40px;
+
+  .todo-input {
+    font-size: 16px;
+    border: 1px solid #000;
+    padding: 6px;
+    margin-right: 10px;
+    border-radius: 2px;
+
+    &:focus {
+      outline: 0;
+      box-shadow: -1px 1px 5px 1px #944dff;
+    }
+  }
+
+  .todo-button {
+    font-size: 16px;
+    padding: 6px 10px;
+    background-color: #e0ccff;
+    border: 1px solid #000;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: darken(#e0ccff, 5%);
+      cursor: pointer;
+    }
+
+    &:focus {
+      background-color: darken(#e0ccff, 5%);
+      outline: 0;
+    }
+  }
+}
